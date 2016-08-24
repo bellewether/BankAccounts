@@ -6,7 +6,11 @@ module Bank
     def initialize(id, current_balance)
       @id = id
       #@initial_balance = initial_balance (This is probably not necessary. Will decide later)
-      @current_balance = current_balance
+      #@current_balance = current_balance
+      if current_balance < 0
+        raise ArgumentError.new("You can't do that. You need money to open an account.")
+      else @current_balance = current_balance
+      end
     end
 
     # Create a method to randomly assign an id to an account later
@@ -26,5 +30,16 @@ module Bank
       @current_balance += deposit_amt
       return @current_balance
     end
+
+    # def assert(expression, message = "Assertion Failed")
+    #   if expression
+    #     return true
+    #   else
+    #     raise Exception.new(message)
+    #   end
+    # end
+
+
+
   end
 end
