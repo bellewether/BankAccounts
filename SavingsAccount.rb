@@ -8,7 +8,6 @@ module Bank
 
     def initialize(id, current_balance, date_created)
       super(id, current_balance, date_created)
-
     end
 
     def withdraw(withdraw_amt)
@@ -24,10 +23,10 @@ module Bank
 end
 
 
-
-sa = Bank::SavingsAccount.new(137, 100, "08-25-2016")
-puts sa.withdraw(0)
-
-#puts sa.withdraw(50)
-#puts sa.withdraw(85)
-puts sa.add_interest_rate(15)
+#TESTS
+# sa = Bank::SavingsAccount.new(137, 100, "08-25-2016")
+# puts sa.withdraw(0)
+#
+# #puts sa.withdraw(50)
+# #puts sa.withdraw(85)
+# puts sa.add_interest_rate(15)
