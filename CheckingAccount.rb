@@ -9,7 +9,6 @@ module Bank
     def initialize(id, current_balance, date_created)
       super(id, current_balance, date_created)
       @num_checks_used = 0
-
     end
 
     def withdraw(withdraw_amt)
@@ -42,13 +41,15 @@ module Bank
   end
 end
 
+
+#TESTS
 # ca = Bank::CheckingAccount.new(137, 100, "8-26-2016")
 # puts ca.withdraw(50)
-
-ca_two = Bank::CheckingAccount.new(138, 100, "8-26-2016")
-puts ca_two.withdraw_using_check(30)
-puts ca_two.withdraw_using_check(30)
-puts ca_two.withdraw_using_check(30)
-puts ca_two.withdraw_using_check(10)
-ca_two.reset_checks
-puts ca_two.withdraw_using_check(8)
+#
+# ca_two = Bank::CheckingAccount.new(138, 100, "8-26-2016")
+# puts ca_two.withdraw_using_check(30)
+# puts ca_two.withdraw_using_check(30)
+# puts ca_two.withdraw_using_check(30)
+# puts ca_two.withdraw_using_check(10)
+# #ca_two.reset_checks
+# puts ca_two.withdraw_using_check(8)
